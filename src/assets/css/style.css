@@ -157,6 +157,18 @@ a:hover { color: var(--brand-accent-dark); }
 }
 .buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
+/* hero photo on the homepage */
+.hero-photo {
+  display: block;
+  width: 100%;
+  max-width: 62rem;
+  margin: 2.75rem auto 0;
+  border-radius: var(--radius);
+  box-shadow: 0 18px 45px rgba(24, 61, 56, 0.18);
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
 .btn {
   display: inline-block;
   padding: 0.9rem 1.9rem;

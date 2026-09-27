@@ -29,3 +29,12 @@ collections:
       - { label: "Link", name: "link", widget: "string", hint: "Full URL to the product or Amazon listing." }
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Blurb", name: "blurb", widget: "text", hint: "One or two sentences on why you love it." }
+
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - name: "homepage"
+        label: "Homepage settings"
+        file: "src/index.njk"
+        fields:
+          - { label: "Hero Photo", name: "hero_image", widget: "image", required: false, hint: "The big photo under the headline on the front page." }
