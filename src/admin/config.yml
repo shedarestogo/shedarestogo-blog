@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text", hint: "Shows on Google and the blog list. Keep it under 160 characters." }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "gear"
+    label: "Gear"
+    folder: "src/gear"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Link", name: "link", widget: "string", hint: "Full URL to the product or Amazon listing." }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Blurb", name: "blurb", widget: "text", hint: "One or two sentences on why you love it." }

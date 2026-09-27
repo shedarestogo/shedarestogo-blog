@@ -1,0 +1,3 @@
+{% if site.amazon_store and site.amazon_store != "PASTE_YOUR_AMAZON_STOREFRONT_URL_HERE" and "http" in site.amazon_store %}
+<a class="btn btn-primary" href="{{ site.amazon_store }}" target="_blank" rel="noopener">Shop my Amazon storefront</a>
+{% endif %}

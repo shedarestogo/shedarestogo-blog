@@ -1,0 +1,84 @@
+---
+layout: base.njk
+title: Epic adventures for solo moms
+description: She Dares To Go helps solo moms create epic hikes, road trips, and travel adventures with their kids, no partner required.
+---
+<section class="hero">
+  <div class="wrap">
+    <h1>You can be a solo mom and still travel.</h1>
+    <p class="subline">I help solo moms create epic adventures with their kids. Hikes, road trips, and travel, without waiting for a partner to come along.</p>
+    <div class="buttons">
+      <a class="btn btn-primary" href="/blog/">Read the blog</a>
+      <a class="btn btn-outline" href="{{ site.plannerUrl }}">Get my free 10-minute trip planner</a>
+    </div>
+    <svg class="peaks" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,70 L0,45 L120,10 L240,50 L360,18 L480,55 L600,12 L720,48 L840,20 L960,52 L1080,15 L1200,45 L1200,70 Z" fill="#173b32" opacity="0.10"/>
+      <path d="M0,70 L0,58 L150,30 L300,60 L450,35 L600,62 L750,32 L900,58 L1050,34 L1200,56 L1200,70 Z" fill="#c1704f" opacity="0.16"/>
+    </svg>
+  </div>
+</section>
+
+<section class="wrap section latest">
+  <p class="eyebrow">Fresh off the road</p>
+  <h2 class="section-title">Latest from the blog</h2>
+  <div class="cards">
+    {% for post in collections.posts %}
+      {% if loop.index <= 3 %}
+      <a class="card" href="{{ post.url }}">
+        <div class="card-img">
+          {% if post.data.image %}
+            <img src="{{ post.data.image }}" alt="{{ post.data.title }}" loading="lazy" />
+          {% else %}
+            <div class="card-img-fallback" aria-hidden="true"></div>
+          {% endif %}
+        </div>
+        <div class="card-body">
+          <p class="card-meta">{{ post.data.date | readableDate }}</p>
+          <h3>{{ post.data.title }}</h3>
+          <p>{{ post.data.description }}</p>
+        </div>
+      </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="freebie-band">
+    <p class="eyebrow">Free for you</p>
+    <h2>Get your free 10-Minute Trip Planner</h2>
+    <p>It finds where to go, where to eat, what it will cost, and builds your full itinerary. Plan your next trip in 10 minutes, not 10 hours of scrolling.</p>
+    <a class="btn btn-primary" href="{{ site.plannerUrl }}">Get the free planner</a>
+  </div>
+</section>
+
+<section class="wrap section">
+  <p class="eyebrow">Pack like a pro</p>
+  <h2 class="section-title">My favorite gear</h2>
+  <p class="page-sub" style="max-width:36rem;">The tried-and-true picks I actually pack for our adventures. No fluff, only the stuff that earns its spot in the car.</p>
+  <div class="buttons" style="justify-content:flex-start; margin-top:1.5rem;">
+    <a class="btn btn-outline" href="/gear/">Browse my gear</a>
+    {% include "amazon-btn.njk" %}
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="guide">
+    <img class="guide-photo" src="/images/shaneice.jpg" alt="Shaneice, creator of She Dares To Go" />
+    <div>
+      <p class="eyebrow">Meet your adventure guide</p>
+      <h2>Hey, I'm Shaneice</h2>
+      <p>I'm a Virginia-based photographer and adventure travel creator. For six years I've been traveling solo with my daughter, proving you don't need another adult to have epic adventures. This blog is where I share the trips, the honest reviews, and the plans.</p>
+      <a class="btn btn-outline" href="/about/">More about me</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="insta-band">
+    <p class="eyebrow">Come say hi</p>
+    <h2>Follow along on Instagram @shedarestogo</h2>
+    <p>Daily adventures, behind the scenes, and the real talk that does not make the blog.</p>
+    <a class="btn btn-light" href="{{ site.instagram }}" target="_blank" rel="noopener">Follow @shedarestogo</a>
+  </div>
+</section>

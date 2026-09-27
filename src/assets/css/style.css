@@ -1,0 +1,438 @@
+/* ============================================================
+   SHE DARES TO GO blog theme
+   ------------------------------------------------------------
+   BRAND VARIABLES: swap any value below when Shaneice sends
+   her official logo, fonts, and color codes. Everything in
+   the theme reads from these, so no other rework is needed.
+
+   Current values are Shaneice's official brand hex codes
+   (2026-09-27). Page background is a warm white she chose
+   over the stronger beige.
+   ============================================================ */
+
+/* ---- self-hosted brand fonts (no third-party dependency) ----
+   Glacial Indifference: free for commercial use (typeface pkg).
+   Beauty Salon (script) is donationware / personal-use only
+   (Xerographer Fonts), so it is NOT embedded. Caveat covers all
+   script accents until Shaneice supplies a licensed file. */
+@font-face {
+  font-family: "Glacial Indifference";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/glacial-indifference-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Glacial Indifference";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/glacial-indifference-700.woff2") format("woff2");
+}
+
+:root {
+  /* ---- brand colors (Shaneice's official hex codes, 2026-09-27) ---- */
+  --brand-bg:            #fdfbf7;  /* page background (warm white) */
+  --brand-surface:       #ffffff;  /* cards, raised surfaces */
+  --brand-ink:           #183d38;  /* deep teal: headings, dark bands */
+  --brand-body:          #000000;  /* body copy */
+  --brand-muted:         #4f6f69;  /* secondary micro-labels only */
+  --brand-accent:        #b86f5a;  /* terracotta: buttons, links */
+  --brand-accent-dark:   #9d5f4b;  /* terracotta hover */
+  --brand-accent-soft:   #d48473;  /* light terracotta wash */
+  --brand-deep:          #183d38;  /* dark section background */
+  --brand-deep-ink:      #ffffff;  /* text on dark sections */
+  --brand-deep-muted:    #ffffff;  /* secondary text on dark */
+  --brand-line:          #ece2cd;  /* hairline borders */
+
+  /* ---- brand fonts (Shaneice's real brand fonts) ---- */
+  --font-display: "League Spartan", "Arial Narrow", sans-serif;  /* headers */
+  --font-heading: "Poppins", system-ui, -apple-system, sans-serif; /* subheaders, card titles */
+  --font-script:  "Caveat", cursive;                        /* script accents (Beauty Salon fallback) */
+  --font-body:    "Glacial Indifference", system-ui, -apple-system, sans-serif; /* body text */
+
+  --radius: 1.25rem;
+  --shadow: 0 12px 32px rgba(23, 59, 50, 0.10);
+}
+
+/* ---- base ---- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--brand-bg);
+  color: var(--brand-body);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+h1, h2, h3 { color: var(--brand-ink); }
+
+a { color: var(--brand-accent); }
+a:hover { color: var(--brand-accent-dark); }
+
+.wrap { max-width: 68rem; margin: 0 auto; padding: 0 1.25rem; }
+.wrap-narrow { max-width: 44rem; margin: 0 auto; padding: 2.5rem 1.25rem; }
+
+/* Friendly script greeting used above section titles,
+   the "Welcome adventure lover!" pattern. */
+.eyebrow {
+  font-family: var(--font-script);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--brand-accent);
+  margin: 0 0 0.25rem;
+}
+.section-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  letter-spacing: 0.01em;
+  margin: 0 0 1.75rem;
+  line-height: 1.2;
+}
+.section { padding: 3.5rem 0; }
+
+/* ---- header ---- */
+.site-header {
+  background: var(--brand-bg);
+  border-bottom: 1px solid var(--brand-line);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+/* Wordmark mirrors her logo: clean caps + script "Go" */
+.brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  color: var(--brand-ink);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.brand .brand-go {
+  font-family: var(--font-script);
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 1.5rem;
+  color: var(--brand-accent);
+  margin-left: 0.15rem;
+}
+.site-header nav a {
+  margin-left: 1.25rem;
+  color: var(--brand-accent);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.98rem;
+}
+.site-header nav a:hover { color: var(--brand-accent-dark); }
+
+/* ---- hero ---- */
+.hero { padding: 4.5rem 0 3.5rem; text-align: center; }
+.hero .eyebrow { font-size: clamp(1.8rem, 4vw, 2.4rem); }
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3.9rem, 10.5vw, 6.9rem);
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  margin: 0.5rem 0 1.25rem;
+  text-transform: uppercase;
+}
+.subline {
+  font-size: 1.2rem;
+  color: var(--brand-body);
+  max-width: 38rem;
+  margin: 0 auto 2.25rem;
+}
+.buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.9rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+.btn-primary {
+  background: var(--brand-accent);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(193, 112, 79, 0.35);
+}
+.btn-primary:hover { background: var(--brand-accent-dark); color: #fff; transform: translateY(-2px); }
+.btn-outline {
+  border: 2px solid var(--brand-accent);
+  color: var(--brand-accent);
+  background: transparent;
+}
+.btn-outline:hover { background: var(--brand-accent); color: #fff; transform: translateY(-2px); }
+.btn-light {
+  background: var(--brand-deep-ink);
+  color: var(--brand-ink);
+}
+.btn-light:hover { background: #fff; color: var(--brand-ink); transform: translateY(-2px); }
+
+/* small mountain divider under the hero */
+.peaks { display: block; width: 100%; height: 70px; margin-top: 3rem; }
+
+/* ---- post cards (image-first, like the blogs she likes) ---- */
+.cards { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+@media (min-width: 680px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+
+.card {
+  display: block;
+  background: var(--brand-surface);
+  border: 1px solid var(--brand-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--brand-body);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.card-img { aspect-ratio: 16 / 10; overflow: hidden; background: var(--brand-accent-soft); }
+.card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Branded placeholder when a post has no featured image yet */
+.card-img-fallback {
+  width: 100%; height: 100%;
+  background:
+    radial-gradient(circle at 78% 22%, var(--brand-accent) 0 9%, transparent 10%),
+    linear-gradient(160deg, var(--brand-ink) 0%, #2c5a4e 55%, var(--brand-accent-dark) 130%);
+  position: relative;
+}
+.card-img-fallback::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 0; height: 46%;
+  background: linear-gradient(to top, rgba(23,59,50,0.55), transparent);
+  clip-path: polygon(0 100%, 0 55%, 18% 20%, 34% 60%, 52% 25%, 70% 62%, 86% 30%, 100% 58%, 100% 100%);
+}
+.card-body { padding: 1.35rem 1.35rem 1.5rem; }
+.card h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.3;
+  margin: 0.5rem 0 0.5rem;
+}
+.card p { color: var(--brand-body); font-size: 0.96rem; margin: 0; }
+.card-meta {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand-accent);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ---- freebie band (dark pine, the "free guide" pattern) ---- */
+.freebie-band {
+  background: var(--brand-deep);
+  color: var(--brand-deep-ink);
+  border-radius: calc(var(--radius) + 0.5rem);
+  margin: 1rem 0;
+  padding: 3.5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.freebie-band::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 85% 15%, rgba(193,112,79,0.35) 0 12%, transparent 13%);
+  pointer-events: none;
+}
+.freebie-band .eyebrow { color: var(--brand-accent); position: relative; }
+.freebie-band h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+  color: var(--brand-deep-ink);
+  margin: 0.25rem 0 1rem;
+  position: relative;
+}
+.freebie-band p {
+  color: var(--brand-deep-muted);
+  max-width: 34rem;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+.freebie-band .btn { position: relative; }
+
+/* ---- meet your guide ---- */
+.guide { display: grid; gap: 2rem; align-items: center; }
+@media (min-width: 720px) { .guide { grid-template-columns: 220px 1fr; } }
+.guide-photo {
+  width: 200px; height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--brand-surface);
+  box-shadow: var(--shadow);
+  justify-self: center;
+}
+.guide h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+  margin: 0.25rem 0 0.75rem;
+}
+.guide p { color: var(--brand-body); margin: 0 0 1.5rem; max-width: 36rem; }
+
+/* ---- blog index rows ---- */
+.page-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  margin: 0 0 0.5rem;
+  line-height: 1.05;
+}
+.page-sub { color: var(--brand-body); font-size: 1.15rem; margin-top: 0; }
+.post-list { display: grid; gap: 1.25rem; margin-top: 2.25rem; }
+.post-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  background: var(--brand-surface);
+  border: 1px solid var(--brand-line);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  text-decoration: none;
+  color: var(--brand-body);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+@media (min-width: 620px) { .post-row { grid-template-columns: 200px 1fr; align-items: center; } }
+.post-row:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.post-thumb { border-radius: 0.9rem; overflow: hidden; aspect-ratio: 16/10; background: var(--brand-accent-soft); }
+.post-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.post-row h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.45rem;
+  margin: 0.4rem 0 0.4rem;
+  line-height: 1.3;
+}
+.post-row p { color: var(--brand-body); margin: 0; }
+
+/* ---- single post ---- */
+.post h1 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(1.9rem, 5vw, 2.9rem);
+  line-height: 1.2;
+  margin: 0.5rem 0 0.75rem;
+}
+.kicker {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand-accent);
+  font-weight: 600;
+  margin: 0;
+}
+.meta { color: var(--brand-muted); font-size: 0.95rem; margin-top: 0; }
+.post-hero-img {
+  width: 100%;
+  border-radius: var(--radius);
+  margin: 1.5rem 0 0.5rem;
+  display: block;
+}
+.post-body h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  margin-top: 2.5rem;
+  font-size: 1.6rem;
+}
+.post-body img { max-width: 100%; border-radius: 1rem; }
+
+/* ---- planner CTA box inside posts ---- */
+.cta-box {
+  background: var(--brand-accent-soft);
+  border: 2px solid var(--brand-accent);
+  border-radius: var(--radius);
+  padding: 2.25rem 2rem;
+  margin: 3rem 0 1rem;
+  text-align: center;
+}
+.cta-box .eyebrow { font-size: 1.4rem; }
+.cta-box h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.7rem;
+  margin: 0.25rem 0 0.75rem;
+}
+.cta-box p { color: var(--brand-body); max-width: 32rem; margin: 0 auto 1.5rem; }
+
+/* ---- banners ---- */
+.sample-banner {
+  background: #fff8e6;
+  border: 2px dashed #d9a441;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+/* ---- about page ---- */
+.about-photo {
+  width: 170px; height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--brand-surface);
+  box-shadow: var(--shadow);
+  margin-bottom: 1.25rem;
+}
+
+/* ---- footer ---- */
+.site-footer {
+  background: var(--brand-deep);
+  color: var(--brand-deep-muted);
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 2rem;
+}
+.site-footer p { margin: 0.3rem 0; }
+.site-footer strong {
+  font-family: var(--font-heading);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brand-deep-ink);
+}
+.site-footer a { color: var(--brand-deep-ink); text-decoration: underline; text-underline-offset: 3px; }
+.site-footer a:hover { color: var(--brand-accent-soft); }
+
+/* ---- instagram follow band (homepage) ---- */
+.insta-band {
+  background: var(--brand-accent-soft);
+  border-radius: calc(var(--radius) + 0.5rem);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+.insta-band h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin: 0.25rem 0 0.75rem;
+  line-height: 1.25;
+}
+.insta-band p { color: var(--brand-body); max-width: 32rem; margin: 0 auto 1.75rem; }
+
+/* ---- gear cards ---- */
+.card-cta { color: var(--brand-accent); font-weight: 700; margin-top: 0.75rem; }
+
+/* ---- nav / footer social icons ---- */
+.site-header nav a svg { vertical-align: -3px; margin-right: 0.3rem; }
+.site-footer a svg { vertical-align: -3px; margin-right: 0.3rem; }

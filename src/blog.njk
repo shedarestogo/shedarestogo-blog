@@ -1,0 +1,28 @@
+---
+layout: base.njk
+title: Blog
+description: Trip ideas, honest reviews, and solo mom travel tips from She Dares To Go.
+permalink: /blog/
+---
+<div class="wrap-narrow">
+  <h1 class="page-title">The Blog</h1>
+  <p class="page-sub">Trip ideas, honest reviews, and plans that work for real life.</p>
+  <div class="post-list">
+    {% for post in collections.posts %}
+    <a class="post-row" href="{{ post.url }}">
+      <div class="post-thumb">
+        {% if post.data.image %}
+          <img src="{{ post.data.image }}" alt="{{ post.data.title }}" loading="lazy" />
+        {% else %}
+          <div class="card-img-fallback" aria-hidden="true"></div>
+        {% endif %}
+      </div>
+      <div>
+        <p class="card-meta">{{ post.data.date | readableDate }}</p>
+        <h2>{{ post.data.title }}</h2>
+        <p>{{ post.data.description }}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>

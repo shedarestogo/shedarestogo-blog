@@ -1,0 +1,1 @@
+{"dependencies":{"@11ty/eleventy":"^2.0.1"},"description":"Blog for @shedarestogo - epic adventures for solo moms","name":"shedarestogo-blog","private":true,"scripts":{"build":"eleventy","serve":"eleventy --serve"},"version":"1.0.0"}
