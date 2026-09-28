@@ -37,4 +37,6 @@ collections:
         label: "Homepage settings"
         file: "src/index.njk"
         fields:
-          - { label: "Hero Photo", name: "hero_image", widget: "image", required: false, hint: "The big photo under the headline on the front page." }
+          - { label: "Headline", name: "hero_headline", widget: "string", hint: "The big headline on the front page." }
+          - { label: "Subheadline", name: "hero_subline", widget: "text", hint: "The smaller line under the headline." }
+          - { label: "Hero Photo", name: "hero_image", widget: "image", required: false, hint: "The big photo across the front page." }
