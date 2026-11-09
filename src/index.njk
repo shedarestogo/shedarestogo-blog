@@ -13,7 +13,7 @@ hero_subline: I help solo moms create epic adventures with their kids. Hikes, ro
     <h1>{{ hero_headline }}</h1>
     <p class="subline">{{ hero_subline }}</p>
     <div class="buttons">
-      <a class="btn btn-primary" href="/blog/">Read the blog</a>
+      <a class="btn btn-primary" href="/sleigh-solo/">Get the Sleigh Solo Guide</a>
       <a class="btn btn-outline" href="{{ site.plannerUrl }}">Get my free 10-minute trip planner</a>
     </div>
   </div>
@@ -24,6 +24,7 @@ hero_subline: I help solo moms create epic adventures with their kids. Hikes, ro
   </div>
 </section>
 
+{# Latest-from-blog section disabled Nov 8, 2026: its links point to unpopulated pages. Remove the comment markers to restore.
 <section class="wrap section latest">
   <p class="eyebrow">Fresh off the road</p>
   <h2 class="section-title">Latest from the blog</h2>
@@ -47,7 +48,7 @@ hero_subline: I help solo moms create epic adventures with their kids. Hikes, ro
       {% endif %}
     {% endfor %}
   </div>
-</section>
+</section> #}
 
 <section class="wrap">
   <div class="freebie-band">
@@ -58,6 +59,7 @@ hero_subline: I help solo moms create epic adventures with their kids. Hikes, ro
   </div>
 </section>
 
+{# Gear section disabled Nov 8, 2026: its link points to an unpopulated page. Remove the comment markers to restore.
 <section class="wrap section">
   <p class="eyebrow">Pack like a pro</p>
   <h2 class="section-title">My favorite gear</h2>
@@ -66,8 +68,9 @@ hero_subline: I help solo moms create epic adventures with their kids. Hikes, ro
     <a class="btn btn-outline" href="/gear/">Browse my gear</a>
     {% include "amazon-btn.njk" %}
   </div>
-</section>
+</section> #}
 
+{# About section disabled Nov 8, 2026: its link points to an unpopulated page. Remove the comment markers to restore.
 <section class="wrap section">
   <div class="guide">
     <img class="guide-photo" src="/images/shaneice.jpg" alt="Shaneice, creator of She Dares To Go" />
@@ -78,7 +81,7 @@ hero_subline: I help solo moms create epic adventures with their kids. Hikes, ro
       <a class="btn btn-outline" href="/about/">More about me</a>
     </div>
   </div>
-</section>
+</section> #}
 
 <section class="wrap">
   <div class="insta-band">
@@ -88,3 +91,4 @@ hero_subline: I help solo moms create epic adventures with their kids. Hikes, ro
     <a class="btn btn-light" href="{{ site.instagram }}" target="_blank" rel="noopener">Follow @shedarestogo</a>
   </div>
 </section>
+
