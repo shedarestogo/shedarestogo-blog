@@ -1,0 +1,244 @@
+layout: base.njk
+title: Media Kit
+description: Partner with Shaneice King of She Dares To Go, the solo mom adventure travel creator reaching 70,000 highly engaged followers across platforms.
+permalink: /media/
+---
+<style>
+  .mk-hero { background: var(--brand-deep); color: var(--brand-deep-ink); padding: 3.5rem 0 3rem; }
+  .mk-hero .eyebrow { color: var(--brand-accent-soft); }
+  .mk-hero h1 { color: #ffffff; font-family: var(--font-display); font-weight: 800; font-size: clamp(2.1rem, 5.5vw, 3.4rem); line-height: 1.08; margin: 0 0 1rem; letter-spacing: 0.01em; }
+  .mk-hero p.lede { font-size: 1.2rem; max-width: 42rem; margin: 0 0 1.5rem; }
+  .mk-hero img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); display: block; margin-top: 2rem; }
+  .mk-name { font-family: var(--font-heading); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.95rem; margin: 0 0 0.5rem; opacity: 0.9; }
+  .mk-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1rem; margin: 2.5rem 0 0.75rem; }
+  .mk-stat { background: var(--brand-surface); border: 1px solid var(--brand-line); border-radius: var(--radius); padding: 1.4rem 1.25rem; box-shadow: var(--shadow); }
+  .mk-stat .num { font-family: var(--font-display); font-weight: 800; font-size: 2.3rem; color: var(--brand-ink); line-height: 1; display: block; margin-bottom: 0.4rem; }
+  .mk-stat .lbl { color: var(--brand-muted); font-size: 0.98rem; line-height: 1.45; display: block; }
+  .mk-platforms { text-align: center; font-family: var(--font-heading); font-weight: 600; color: var(--brand-ink); font-size: 1.05rem; margin: 1.25rem 0 0.25rem; }
+  .mk-platforms span { color: var(--brand-accent); font-weight: 700; }
+  .mk-reported { text-align: center; color: var(--brand-muted); font-size: 0.9rem; margin: 0; }
+  .mk-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
+  .mk-card { background: var(--brand-surface); border: 1px solid var(--brand-line); border-radius: var(--radius); padding: 1.6rem 1.4rem; box-shadow: var(--shadow); }
+  .mk-card h3 { font-family: var(--font-heading); font-weight: 600; margin: 0 0 0.6rem; font-size: 1.2rem; }
+  .mk-card p { margin: 0; }
+  .mk-case { background: var(--brand-surface); border: 1px solid var(--brand-line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 2rem 1.75rem; margin-bottom: 1.25rem; }
+  .mk-case .kicker { font-family: var(--font-heading); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--brand-accent); font-size: 0.9rem; margin: 0 0 0.4rem; }
+  .mk-case h3 { font-family: var(--font-heading); font-weight: 600; font-size: 1.45rem; margin: 0 0 0.75rem; }
+  .mk-results { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1rem; margin-top: 1.25rem; border-top: 1px solid var(--brand-line); padding-top: 1.25rem; }
+  .mk-results .num { font-family: var(--font-display); font-weight: 800; font-size: 1.9rem; color: var(--brand-ink); display: block; line-height: 1.05; }
+  .mk-results .lbl { color: var(--brand-muted); font-size: 0.95rem; }
+  .mk-note { color: var(--brand-muted); font-size: 0.92rem; margin-top: 1rem; }
+  .mk-fit { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1.5rem; }
+  .mk-fit h3 { font-family: var(--font-heading); font-weight: 600; margin-top: 0; }
+  .mk-partner { border-top: 1px solid var(--brand-line); padding: 1.75rem 0; }
+  .mk-partner .step { font-family: var(--font-heading); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--brand-accent); font-size: 0.9rem; margin: 0 0 0.35rem; }
+  .mk-partner h3 { font-family: var(--font-heading); font-weight: 600; font-size: 1.5rem; margin: 0 0 0.6rem; }
+  .mk-partner p { max-width: 46rem; margin: 0; }
+  .mk-cta { background: var(--brand-deep); color: #ffffff; border-radius: var(--radius); padding: 2.5rem 2rem; text-align: center; }
+  .mk-cta h2 { color: #ffffff; font-family: var(--font-display); font-weight: 800; font-size: clamp(1.7rem, 4vw, 2.4rem); margin: 0 0 0.75rem; }
+  .mk-cta p { margin: 0 auto 1.5rem; max-width: 38rem; }
+  .mk-btn { display: inline-block; background: var(--brand-accent); color: #ffffff; font-family: var(--font-heading); font-weight: 600; text-decoration: none; padding: 0.85rem 1.9rem; border-radius: 999px; margin: 0.25rem; }
+  .mk-btn:hover { background: var(--brand-accent-dark); color: #ffffff; }
+  .mk-photo { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); display: block; }
+  .mk-quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
+  .mk-quote { background: var(--brand-surface); border: 1px solid var(--brand-line); border-radius: var(--radius); padding: 1.6rem 1.4rem; box-shadow: var(--shadow); margin: 0; }
+  .mk-quote .stars { color: var(--brand-accent); letter-spacing: 0.2em; margin: 0 0 0.75rem; }
+  .mk-quote blockquote { margin: 0 0 0.9rem; font-size: 1.12rem; line-height: 1.55; color: var(--brand-ink); }
+  .mk-quote figcaption { font-family: var(--font-heading); font-weight: 600; color: var(--brand-muted); font-size: 0.95rem; }
+</style>
+
+<div class="mk-hero">
+  <div class="wrap">
+    <p class="mk-name">Shaneice King · @shedarestogo</p>
+    <h1>Let&rsquo;s make your destination the one she drives to.</h1>
+    <p class="lede">I&rsquo;m Shaneice, the creator behind She Dares To Go. I help solo moms create epic hikes, road trips, and travel adventures with their kids, without waiting on a partner. My content shows your destination through the eyes of the mom who plans it, books it, and drives it herself, so your place becomes an easy yes for the women who make the travel decisions.</p>
+    <img src="/images/hero.jpg" alt="Shaneice and her daughter standing on red rocks in the desert at golden hour" />
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="mk-stats">
+    <div class="mk-stat"><span class="num">70,000</span><span class="lbl">Highly engaged followers across platforms</span></div>
+    <div class="mk-stat"><span class="num">5M</span><span class="lbl">Monthly views</span></div>
+    <div class="mk-stat"><span class="num">138K</span><span class="lbl">Interactions every month: likes, shares, saves, and comments</span></div>
+    <div class="mk-stat"><span class="num">80%+</span><span class="lbl">Women ages 29 to 44, who make most buying decisions</span></div>
+  </div>
+  <p class="mk-platforms"><span>31K</span> Facebook &nbsp;·&nbsp; <span>29.4K</span> Instagram &nbsp;·&nbsp; <span>10.7K</span> TikTok</p>
+  <p class="mk-reported">Reported October 2026.</p>
+</div>
+
+<section class="section" style="padding-bottom: 0;">
+  <div class="wrap">
+    <p class="eyebrow">In their words</p>
+    <h2 class="section-title">Creative that connects. A partner you can count on.</h2>
+    <div class="mk-quotes">
+      <figure class="mk-quote">
+        <blockquote>&ldquo;We were really pleased by the performance of the content&rdquo;</blockquote>
+        <figcaption>Visit Virginia, tourism board campaign</figcaption>
+      </figure>
+      <figure class="mk-quote">
+        <blockquote>&ldquo;Shaneice! I&rsquo;m thrilled that our campaign has looked so good on social!&rdquo;</blockquote>
+        <figcaption>Holiday experience brand partner. The campaign was the client&rsquo;s highest performing asset series of the season.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Proof it works</p>
+    <h2 class="section-title">Content that moves moms from watching to booking.</h2>
+
+    <div class="mk-case">
+      <p class="kicker">Organic campaign · Tennessee</p>
+      <h3>Out-of-state trips, planned from Virginia.</h3>
+      <p>An organic Tennessee campaign reached primarily Virginia-based travelers and turned views into trip planning. This is the pattern my content creates: a mom sees a place, saves it, shares it with her people, and clicks through to plan the drive herself.</p>
+      <div class="mk-results">
+        <div><span class="num">5.2M</span><span class="lbl">Views, fully organic</span></div>
+        <div><span class="num">100K+</span><span class="lbl">Clicks, shares, and saves</span></div>
+        <div><span class="num">~500</span><span class="lbl">Link taps to one partner&rsquo;s booking page, from a single reel</span></div>
+      </div>
+      <p class="mk-note">Results achieved without paid boosting.</p>
+      <p style="margin-top: 0.75rem;"><a href="https://www.instagram.com/p/DY8H4vzxDZ5/">Watch the Gatlinburg reel</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/reel/Ddynv4CRh2C/">Watch the zorbing reel</a></p>
+    </div>
+
+    <div class="mk-case">
+      <p class="kicker">Case study · Visit Virginia</p>
+      <h3>Four reels that reached almost entirely new audiences.</h3>
+      <p>A tourism board campaign promoting the region and its unique experiences: four Instagram reels with daily stories, built to find new travelers, not just entertain current followers.</p>
+      <div class="mk-results">
+        <div><span class="num">347K</span><span class="lbl">Reach</span></div>
+        <div><span class="num">97.1%</span><span class="lbl">Non-follower reach</span></div>
+        <div><span class="num">13.1K</span><span class="lbl">Shares and saves combined</span></div>
+        <div><span class="num">514</span><span class="lbl">DM automation conversations started</span></div>
+      </div>
+      <p style="margin-top: 1rem;"><a href="https://www.instagram.com/p/DagsrP5RNf-/">Watch the campaign</a></p>
+    </div>
+
+    <div class="mk-case">
+      <p class="kicker">Case study · Holiday experience brand</p>
+      <h3>The client&rsquo;s highest performing asset series of the season.</h3>
+      <p>A seasonal activation built to increase bookings: three Instagram reels crossposted to TikTok, planned around how moms actually decide on a holiday outing.</p>
+      <div class="mk-results">
+        <div><span class="num">375K</span><span class="lbl">Reach</span></div>
+        <div><span class="num">6.7K</span><span class="lbl">Shares</span></div>
+        <div><span class="num">7K</span><span class="lbl">Saves</span></div>
+        <div><span class="num">200</span><span class="lbl">Comments</span></div>
+      </div>
+    </div>
+
+    <div class="mk-cards">
+      <div class="mk-card">
+        <h3>Planning intent, not just views</h3>
+        <p>In the last 30 days on Instagram, saves and shares made up nearly 40% of all interactions. Saves and shares are planning behavior. My audience collects trips to take, not content to scroll past.</p>
+      </div>
+      <div class="mk-card">
+        <h3>A visual partner, not just a post</h3>
+        <p>Partners receive collaborative reels plus professionally edited B-roll clips and photo assets, shot by a working professional photographer, for long-term use across your social channels and website.</p>
+      </div>
+      <div class="mk-card">
+        <h3>The segment nobody else serves</h3>
+        <p>I speak directly to the solo-parent traveler, an underserved segment making full-price decisions for the whole trip: the hotel, the tickets, the meals, the gas. One decision maker, one booking, no committee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="wrap">
+    <p class="eyebrow">Selected work</p>
+    <h2 class="section-title">Watch the work.</h2>
+    <div class="mk-cards">
+      <div class="mk-card">
+        <h3>Gatlinburg, Tennessee</h3>
+        <p>1.4M views and 23K saves and shares on a destination teaser built to increase visitation for tour operators.</p>
+        <p style="margin-top: 0.75rem;"><a href="https://www.instagram.com/p/DY8H4vzxDZ5/">Watch the reel</a></p>
+      </div>
+      <div class="mk-card">
+        <h3>New Hampshire Ice Castles</h3>
+        <p>575K views and 15.5K saves and shares on a single experience highlight, built to reach an out-of-state audience.</p>
+        <p style="margin-top: 0.75rem;"><a href="https://www.instagram.com/reel/DTeGqj4EabY/">Watch the reel</a></p>
+      </div>
+      <div class="mk-card">
+        <h3>Finger Lakes, New York</h3>
+        <p>212K views on a trend-driven destination discovery reel.</p>
+        <p style="margin-top: 0.75rem;"><a href="https://www.instagram.com/reel/Da_acy6B34c/">Watch the reel</a></p>
+      </div>
+      <div class="mk-card">
+        <h3>Assateague Island National Park</h3>
+        <p>116K views, 6K shares, and 516 link clicks on a practical weekend itinerary built to drive bookings.</p>
+        <p style="margin-top: 0.75rem;"><a href="https://www.instagram.com/reel/DYn4V5bRzTA/">Watch the reel</a></p>
+      </div>
+      <div class="mk-card">
+        <h3>Tucker County, West Virginia</h3>
+        <p>100K views and 10K saves and shares on a vlog-style itinerary with lodging integrated, aimed at solo parents.</p>
+        <p style="margin-top: 0.75rem;"><a href="https://www.instagram.com/reel/DP2BvaLkkJs/">Watch the reel</a></p>
+      </div>
+      <div class="mk-card">
+        <h3>Vander Outdoors</h3>
+        <p>98K views and 150 link clicks on a product brand integration for a camper van company.</p>
+        <p style="margin-top: 0.75rem;"><a href="https://www.instagram.com/p/DYdbH2hx0bB/">Watch the post</a></p>
+      </div>
+      <div class="mk-card">
+        <h3>Cascades Falls, Pembroke, Virginia</h3>
+        <p>60K views and 4K saves and shares on a detailed experience guide.</p>
+        <p style="margin-top: 0.75rem;"><a href="https://www.instagram.com/reel/DZXcLs5RtXX/">Watch the reel</a></p>
+      </div>
+      <div class="mk-card">
+        <h3>Visit Norfolk</h3>
+        <p>60K views and 800 saves and shares on a destination highlight built to reach audiences outside Norfolk.</p>
+        <p style="margin-top: 0.75rem;"><a href="https://www.instagram.com/reel/DaX3ROCxQWp/">Watch the reel</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="wrap">
+    <p class="eyebrow">Audience fit</p>
+    <h2 class="section-title">Virginia moms, and every mom watching them go.</h2>
+    <div class="mk-fit">
+      <div>
+        <h3>Who she is</h3>
+        <p>A solo mom in her 30s traveling with her kids, or taking the trip on her own. Solo describes the trip, not her marital status: she may be divorced, widowed, a military spouse with a partner stationed overseas, or partnered with someone who will not go outside. Her kids are her world, and she does life with them instead of watching from the sidelines.</p>
+      </div>
+      <div>
+        <h3>How she buys</h3>
+        <p>She is independent, bold, and pre-sold on the desire to go. What stops her is logistics overwhelm, not price. She makes most buying decisions in her household, her splurge is travel, and every destination I feature is framed by drive time from Virginia, where my core audience plans its road trips.</p>
+      </div>
+    </div>
+    <p class="mk-reported" style="text-align: left; margin-top: 1rem;">Over 80% women ages 29 to 44. Core audience in Virginia and the DC drive market, expanding across the East Coast and the USA. Instagram community: 83.7% women, 98% United States, with top follower cities Washington DC, Virginia Beach, and Richmond.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="wrap">
+    <p class="eyebrow">Ways to partner</p>
+    <h2 class="section-title">Let&rsquo;s find the right fit for your goals.</h2>
+
+    <div class="mk-partner">
+      <p class="step">01 / Build a relationship</p>
+      <h3>Long-term partnerships</h3>
+      <p>My favorite way to work together. An ongoing partnership lets my audience watch your destination or product become part of our real life across a season, building the trust that moves a mom from interested to booked. Ambassadorships and recurring content series give us room to learn what resonates and build on it.</p>
+    </div>
+
+    <div class="mk-partner">
+      <p class="step">02 / Bring your brief to life</p>
+      <h3>Custom campaigns</h3>
+      <p>Have a campaign or season to promote? I bring it to life with storytelling built for solo moms: sponsored and collaborative reels, story coverage, blog features on shedarestogo.com, and the photo and B-roll assets your team can keep using after the post is live. Every campaign starts with testing: multiple hooks and first frames run as trials with new audiences, and the proven winner is what runs as your main post. Deliverables are shaped to your goals and your budget conversation starts with a call, not a form.</p>
+    </div>
+
+    <div class="mk-partner">
+      <p class="step">03 / Extend the story</p>
+      <h3>License the content</h3>
+      <p>Bring my storytelling into your own marketing. License professionally shot video and photography for your social channels, advertising, and website, with usage rights and duration tailored to your campaign, including paid usage options.</p>
+    </div>
+
+    <div class="mk-cta">
+      <h2>Ready when you are.</h2>
+      <p>Tell me where you want more moms driving to, and I will send back ideas, deliverables, and rates. I review every inquiry myself and reply within two business days.</p>
+      <a class="mk-btn" href="mailto:hello@shedarestogo.com">hello@shedarestogo.com</a>
+      <a class="mk-btn" href="https://canva.link/she-dares-to-go-portfolio">View my portfolio</a>
+    </div>
+  </div>
+</section>
