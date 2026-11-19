@@ -46,6 +46,15 @@ permalink: /media/
   .mk-quote .stars { color: var(--brand-accent); letter-spacing: 0.2em; margin: 0 0 0.75rem; }
   .mk-quote blockquote { margin: 0 0 0.9rem; font-size: 1.12rem; line-height: 1.55; color: var(--brand-ink); }
   .mk-quote figcaption { font-family: var(--font-heading); font-weight: 600; color: var(--brand-muted); font-size: 0.95rem; }
+  .mk-visual { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.25rem; margin: 0 0 2rem; }
+  .mk-visual a.mk-thumb { display: block; position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+  .mk-visual a.mk-thumb img { width: 100%; display: block; aspect-ratio: 9 / 16; object-fit: cover; }
+  .mk-visual a.mk-thumb::after { content: "\25B6"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 3.4rem; height: 3.4rem; border-radius: 50%; background: rgba(0, 0, 0, 0.55); color: #ffffff; font-size: 1.25rem; line-height: 3.4rem; text-align: center; padding-left: 0.2rem; }
+  .mk-visual p { margin: 0.7rem 0 0; font-size: 0.98rem; }
+  .mk-photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.25rem; }
+  .mk-photos figure { margin: 0; }
+  .mk-photos img { width: 100%; display: block; border-radius: var(--radius); box-shadow: var(--shadow); aspect-ratio: 4 / 3; object-fit: cover; }
+  .mk-photos figcaption { margin-top: 0.6rem; font-size: 0.95rem; color: var(--brand-muted); font-family: var(--font-heading); font-weight: 600; }
 </style>
 
 <div class="mk-hero">
@@ -149,26 +158,30 @@ permalink: /media/
   <div class="wrap">
     <p class="eyebrow">Selected work</p>
     <h2 class="section-title">Watch the work.</h2>
+    <p style="max-width: 42rem;">Tap any thumbnail to watch the post on Instagram, exactly as it ran.</p>
+    <div class="mk-visual">
+      <div>
+        <a class="mk-thumb" href="https://www.instagram.com/p/DY8H4vzxDZ5/"><img src="/images/mk-DY8H4vzxDZ5.jpg" alt="Gatlinburg, Tennessee reel thumbnail" /></a>
+        <p><strong>Gatlinburg, Tennessee.</strong> 1.4M views and 23K saves and shares on a destination teaser built to increase visitation for tour operators.</p>
+      </div>
+      <div>
+        <a class="mk-thumb" href="https://www.instagram.com/p/DagsrP5RNf-/"><img src="/images/mk-DagsrP5RNf-.jpg" alt="Visit Virginia campaign reel thumbnail" /></a>
+        <p><strong>Visit Virginia.</strong> 347K reach, 97.1% non-followers, and 13.1K shares and saves on a tourism board campaign.</p>
+      </div>
+      <div>
+        <a class="mk-thumb" href="https://www.instagram.com/reel/DTeGqj4EabY/"><img src="/images/mk-DTeGqj4EabY.jpg" alt="New Hampshire Ice Castles reel thumbnail" /></a>
+        <p><strong>New Hampshire Ice Castles.</strong> 575K views and 15.5K saves and shares on a single experience highlight, built to reach an out-of-state audience.</p>
+      </div>
+      <div>
+        <a class="mk-thumb" href="https://www.instagram.com/reel/DYn4V5bRzTA/"><img src="/images/mk-DYn4V5bRzTA.jpg" alt="Assateague Island reel thumbnail" /></a>
+        <p><strong>Assateague Island National Park.</strong> 116K views, 6K shares, and 516 link clicks on a practical weekend itinerary built to drive bookings.</p>
+      </div>
+    </div>
     <div class="mk-cards">
-      <div class="mk-card">
-        <h3>Gatlinburg, Tennessee</h3>
-        <p>1.4M views and 23K saves and shares on a destination teaser built to increase visitation for tour operators.</p>
-        <p style="margin-top: 0.75rem;"><a href="https://www.instagram.com/p/DY8H4vzxDZ5/">Watch the reel</a></p>
-      </div>
-      <div class="mk-card">
-        <h3>New Hampshire Ice Castles</h3>
-        <p>575K views and 15.5K saves and shares on a single experience highlight, built to reach an out-of-state audience.</p>
-        <p style="margin-top: 0.75rem;"><a href="https://www.instagram.com/reel/DTeGqj4EabY/">Watch the reel</a></p>
-      </div>
       <div class="mk-card">
         <h3>Finger Lakes, New York</h3>
         <p>212K views on a trend-driven destination discovery reel.</p>
         <p style="margin-top: 0.75rem;"><a href="https://www.instagram.com/reel/Da_acy6B34c/">Watch the reel</a></p>
-      </div>
-      <div class="mk-card">
-        <h3>Assateague Island National Park</h3>
-        <p>116K views, 6K shares, and 516 link clicks on a practical weekend itinerary built to drive bookings.</p>
-        <p style="margin-top: 0.75rem;"><a href="https://www.instagram.com/reel/DYn4V5bRzTA/">Watch the reel</a></p>
       </div>
       <div class="mk-card">
         <h3>Tucker County, West Virginia</h3>
@@ -190,6 +203,28 @@ permalink: /media/
         <p>60K views and 800 saves and shares on a destination highlight built to reach audiences outside Norfolk.</p>
         <p style="margin-top: 0.75rem;"><a href="https://www.instagram.com/reel/DaX3ROCxQWp/">Watch the reel</a></p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="wrap">
+    <p class="eyebrow">Brand photography</p>
+    <h2 class="section-title">Shot by a professional photographer.</h2>
+    <p style="max-width: 42rem;">Partners receive photo assets shot and edited by a working professional photographer, ready for long-term use across your social channels and website.</p>
+    <div class="mk-photos">
+      <figure>
+        <img src="/images/photo-fresno.jpg" alt="Brand photography for Visit Fresno County" />
+        <figcaption>Visit Fresno County</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/photo-hotel.jpg" alt="Hotel partnership photography" />
+        <figcaption>Hotel partnership</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/photo-cascade-falls.jpg" alt="Cascades Falls, Pembroke, Virginia" />
+        <figcaption>Cascades Falls, Virginia</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -243,4 +278,3 @@ permalink: /media/
     </div>
   </div>
 </section>
-
